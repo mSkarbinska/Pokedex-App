@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 
-export default function PokemonCard({name, type, img, id}) {
+export default function PokemonCard({name, type, img, id, onClick}) {
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
       }
@@ -14,7 +14,7 @@ export default function PokemonCard({name, type, img, id}) {
         <Card.Text>
             {capitalizeFirstLetter(type)}
         </Card.Text>
-        <Button variant="primary">More info</Button>
+        <Button variant="primary" onClick={onClick}>More info</Button>
         </Card.Body>
       </Card>
 
